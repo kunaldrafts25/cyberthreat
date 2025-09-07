@@ -1,0 +1,146 @@
+# Cyber Threat AI System Configuration
+system:
+  name: "cyber-threat-ai"
+  version: "0.1.0"
+  device: "auto"  # auto, cpu, cuda
+  seed: 42
+  deterministic: true
+
+# Data configuration
+data:
+  dataset_path: "data/zero_day_attack_detection_dataset_V1-400k"
+  target_column_priority: ["Threat Level", "Prediction", "Anomaly Score"]
+  drop_unknown_labels: true
+  sample_limit: null  # null for all data, int for subset
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  batch_size: 32
+  num_workers: 4
+  
+  # Label mapping
+  label_mapping:
+    benign: ["benign", "low", "informational", "none", "normal", "ok"]
+    suspicious: ["medium", "suspicious", "anomaly", "suspicious_activity", "suspicious-activity"]
+    malicious: ["high", "critical", "malicious", "attack", "compromise", "exploit"]
+  
+  anomaly_thresholds:
+    malicious: 0.8
+    suspicious: 0.5
+
+  # Feature engineering
+  max_seq_length: 512
+  embedding_dim: 128
+  image_size: 64  # for byte-matrix conversion
+  graph_max_nodes: 100
+
+# Model architecture
+models:
+  # Multi-modal encoders
+  vit:
+    patch_size: 8
+    dim: 384
+    depth: 6
+    heads: 6
+    mlp_dim: 1024
+    dropout: 0.1
+  
+  gcn:
+    hidden_dim: 256
+    num_layers: 3
+    dropout: 0.2
+    
+  transformer:
+    d_model: 384
+    nhead: 6
+    num_layers: 4
+    dropout: 0.1
+    
+  # Fusion and triage
+  fusion:
+    hidden_dim: 512
+    num_heads: 8
+    dropout: 0.15
+    
+  triage:
+    hidden_dim: 256
+    num_classes: 3
+    dropout_samples: 100  # for MC-Dropout uncertainty
+
+# Self-supervised learning
+ssl:
+  enabled: true
+  masking_ratio: 0.15
+  temperature: 0.07
+  epochs: 10
+
+# Federated learning
+federated:
+  enabled: false
+  num_clients: 10
+  local_epochs: 3
+  server_rounds: 100
+
+# Neuro-symbolic reasoning
+neuro_symbolic:
+  kg_entities: ["IP", "PORT", "PROTOCOL", "GEOLOCATION", "USER_AGENT"]
+  confidence_threshold: 0.7
+  rule_weight: 0.3
+
+# Advanced analytics
+analytics:
+  uncertainty_threshold: 0.5
+  sa_temperature_init: 1000.0
+  sa_cooling_rate: 0.95
+  sa_iterations: 1000
+
+# Reinforcement learning
+rl:
+  env_name: "ThreatDecisionEnv"
+  action_space: 3  # monitor, isolate, block
+  learning_rate: 1e-4
+  gamma: 0.99
+  eps_start: 1.0
+  eps_end: 0.01
+  eps_decay: 0.995
+  memory_size: 10000
+  target_update: 100
+
+# Training
+training:
+  epochs: 50
+  learning_rate: 1e-4
+  weight_decay: 1e-5
+  gradient_clip: 1.0
+  early_stopping_patience: 10
+  save_top_k: 3
+  log_every_n_steps: 100
+  val_every_n_epochs: 1
+
+# Paths
+paths:
+  data_dir: "data"
+  checkpoints_dir: "checkpoints"
+  logs_dir: "reports/logs"
+  artifacts_dir: "reports/artifacts"
+  kg_cache: "reports/artifacts/knowledge_graph.pkl"
+
+# Serving
+serve:
+  host: "0.0.0.0"
+  port: 8080
+  workers: 1
+  timeout: 30
+  max_batch_size: 16
+
+# Logging
+logging:
+  level: "INFO"
+  format: "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
+  rotation: "100 MB"
+  retention: "30 days"
+
+# Proactive simulation (gated)
+simulation:
+  enabled: false  # Must be false by default
+  adversarial_generation: false
