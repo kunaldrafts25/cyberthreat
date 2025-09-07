@@ -115,7 +115,7 @@ class Config:
             yaml.safe_dump(OmegaConf.to_container(self._config, resolve=True), f, indent=2)
         
         logger.info(f"Configuration saved to {save_path}")
-
+    
 
 # Global config instance
 _global_config: Optional[Config] = None

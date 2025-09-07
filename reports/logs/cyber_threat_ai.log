@@ -1,0 +1,88 @@
+2025-09-08 01:35:07 | INFO     | src.common.logging:setup_logging:73 - Logging configured successfully
+2025-09-08 01:35:07 | INFO     | src.common.utils:set_seed:28 - Random seed set to 42
+2025-09-08 01:35:07 | INFO     | src.common.utils:get_device:46 - CUDA not available, using CPU
+2025-09-08 01:35:07 | INFO     | src.models.vit_small:__init__:200 - VisionTransformerSmall initialized: 64x64 -> 64 patches, 384D
+2025-09-08 01:36:47 | INFO     | src.common.logging:setup_logging:73 - Logging configured successfully
+2025-09-08 01:36:47 | INFO     | src.common.utils:set_seed:28 - Random seed set to 42
+2025-09-08 01:36:47 | INFO     | src.common.utils:get_device:46 - CUDA not available, using CPU
+2025-09-08 01:36:47 | INFO     | src.models.vit_small:__init__:200 - VisionTransformerSmall initialized: 64x64 -> 64 patches, 384D
+2025-09-08 01:40:56 | INFO     | src.common.logging:setup_logging:73 - Logging configured successfully
+2025-09-08 01:40:56 | INFO     | src.common.utils:set_seed:28 - Random seed set to 42
+2025-09-08 01:40:56 | INFO     | src.common.utils:get_device:46 - CUDA not available, using CPU
+2025-09-08 01:40:56 | INFO     | src.models.vit_small:__init__:200 - VisionTransformerSmall initialized: 64x64 -> 64 patches, 384D
+2025-09-08 02:04:59 | INFO     | src.common.logging:setup_logging:73 - Logging configured successfully
+2025-09-08 02:04:59 | INFO     | src.common.utils:set_seed:28 - Random seed set to 42
+2025-09-08 02:04:59 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:05:00 | INFO     | src.models.vit_small:__init__:200 - VisionTransformerSmall initialized: 64x64 -> 64 patches, 384D
+2025-09-08 02:11:28 | INFO     | src.common.logging:setup_logging:73 - Logging configured successfully
+2025-09-08 02:11:28 | INFO     | src.common.utils:set_seed:28 - Random seed set to 42
+2025-09-08 02:11:28 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:11:28 | INFO     | src.models.vit_small:__init__:200 - VisionTransformerSmall initialized: 64x64 -> 64 patches, 384D
+2025-09-08 02:11:28 | INFO     | src.models.gcn:__init__:103 - GCN initialized: 25 -> 256 -> 256, 3 layers
+2025-09-08 02:11:28 | INFO     | src.models.transformer_text:__init__:112 - TransformerTextEncoder initialized: 384D, 4 layers, 6 heads
+2025-09-08 02:11:28 | INFO     | src.models.fusion:__init__:209 - MultiModalFusionNetwork initialized: 5 modalities -> 512D
+2025-09-08 02:11:28 | INFO     | src.models.triage_head:__init__:154 - ThreatTriageHead initialized: 512 -> 3 classes, 100 MC samples
+2025-09-08 02:11:29 | INFO     | src.models.threat_system:_init_ssl_components:88 - SSL components initialized
+2025-09-08 02:11:29 | INFO     | src.models.threat_system:__init__:64 - ThreatDetectionSystem initialized with all components
+2025-09-08 02:11:29 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:11:29 | INFO     | src.neuro_symbolic.knowledge_graph:_initialize_relations:92 - Initialized 16 knowledge relations
+2025-09-08 02:11:29 | INFO     | src.neuro_symbolic.knowledge_graph:__init__:31 - ThreatKnowledgeGraph initialized with 44 nodes
+2025-09-08 02:11:29 | INFO     | src.neuro_symbolic.rules:__init__:121 - ThreatRuleEngine initialized with 10 rules
+2025-09-08 02:11:29 | INFO     | src.neuro_symbolic.fusion_validate:__init__:54 - NeuroSymbolicFusion initialized
+2025-09-08 02:19:31 | INFO     | src.common.logging:setup_logging:73 - Logging configured successfully
+2025-09-08 02:19:31 | INFO     | src.common.utils:set_seed:28 - Random seed set to 42
+2025-09-08 02:19:31 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:19:31 | INFO     | src.models.vit_small:__init__:200 - VisionTransformerSmall initialized: 64x64 -> 64 patches, 384D
+2025-09-08 02:19:31 | INFO     | src.models.gcn:__init__:103 - GCN initialized: 25 -> 256 -> 256, 3 layers
+2025-09-08 02:19:31 | INFO     | src.models.transformer_text:__init__:112 - TransformerTextEncoder initialized: 384D, 4 layers, 6 heads
+2025-09-08 02:19:31 | INFO     | src.models.fusion:__init__:209 - MultiModalFusionNetwork initialized: 5 modalities -> 512D
+2025-09-08 02:19:31 | INFO     | src.models.triage_head:__init__:154 - ThreatTriageHead initialized: 512 -> 3 classes, 100 MC samples
+2025-09-08 02:19:32 | INFO     | src.models.threat_system:_init_ssl_components:88 - SSL components initialized
+2025-09-08 02:19:32 | INFO     | src.models.threat_system:__init__:64 - ThreatDetectionSystem initialized with all components
+2025-09-08 02:19:32 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:19:32 | INFO     | src.neuro_symbolic.knowledge_graph:_initialize_relations:92 - Initialized 16 knowledge relations
+2025-09-08 02:19:32 | INFO     | src.neuro_symbolic.knowledge_graph:__init__:31 - ThreatKnowledgeGraph initialized with 44 nodes
+2025-09-08 02:19:32 | INFO     | src.neuro_symbolic.rules:__init__:121 - ThreatRuleEngine initialized with 10 rules
+2025-09-08 02:19:32 | INFO     | src.neuro_symbolic.fusion_validate:__init__:54 - NeuroSymbolicFusion initialized
+2025-09-08 02:22:12 | INFO     | src.common.logging:setup_logging:73 - Logging configured successfully
+2025-09-08 02:22:12 | INFO     | src.common.utils:set_seed:28 - Random seed set to 42
+2025-09-08 02:22:12 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:22:12 | INFO     | src.models.vit_small:__init__:200 - VisionTransformerSmall initialized: 64x64 -> 64 patches, 384D
+2025-09-08 02:22:12 | INFO     | src.models.gcn:__init__:103 - GCN initialized: 25 -> 256 -> 256, 3 layers
+2025-09-08 02:22:12 | INFO     | src.models.transformer_text:__init__:112 - TransformerTextEncoder initialized: 384D, 4 layers, 6 heads
+2025-09-08 02:22:12 | INFO     | src.models.fusion:__init__:209 - MultiModalFusionNetwork initialized: 5 modalities -> 512D
+2025-09-08 02:22:12 | INFO     | src.models.triage_head:__init__:154 - ThreatTriageHead initialized: 512 -> 3 classes, 100 MC samples
+2025-09-08 02:22:12 | INFO     | src.models.threat_system:_init_ssl_components:88 - SSL components initialized
+2025-09-08 02:22:12 | INFO     | src.models.threat_system:__init__:64 - ThreatDetectionSystem initialized with all components
+2025-09-08 02:22:12 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:22:12 | INFO     | src.neuro_symbolic.knowledge_graph:_initialize_relations:92 - Initialized 16 knowledge relations
+2025-09-08 02:22:12 | INFO     | src.neuro_symbolic.knowledge_graph:__init__:31 - ThreatKnowledgeGraph initialized with 44 nodes
+2025-09-08 02:22:12 | INFO     | src.neuro_symbolic.rules:__init__:121 - ThreatRuleEngine initialized with 10 rules
+2025-09-08 02:22:12 | INFO     | src.neuro_symbolic.fusion_validate:__init__:54 - NeuroSymbolicFusion initialized
+2025-09-08 02:22:12 | INFO     | src.train.train_core:__init__:63 - ThreatTrainer initialized
+2025-09-08 02:22:15 | INFO     | src.data.loader:load_dataset:114 - Dataset loaded with shape (400000, 26)
+2025-09-08 02:22:15 | INFO     | src.data.loader:load_dataset:115 - Columns: ['Time', 'Protocol', 'Flag', 'Family', 'Clusters', 'SeddAddress', 'ExpAddress', 'BTC', 'USD', 'Netflow Bytes', 'IP Address', 'Threat Level', 'Port', 'Prediction', 'Payload Size', 'Number of Packets', 'Application Layer Data', 'User-Agent', 'Geolocation', 'Logistics ID', 'Anomaly Score', 'Event Description', 'Response Time', 'Session ID', 'Data Transfer Rate', 'Error Code']
+2025-09-08 02:23:05 | INFO     | src.data.loader:extract_labels:180 - Dropping 0 samples with unknown labels
+2025-09-08 02:23:13 | INFO     | src.data.preprocessing:process_features:56 - Processing multi-modal features...
+2025-09-08 02:24:22 | INFO     | src.data.preprocessing:_process_graph_features:229 - Created graph with 800000 nodes and 400000 edges
+2025-09-08 02:31:56 | INFO     | src.common.logging:setup_logging:73 - Logging configured successfully
+2025-09-08 02:31:56 | INFO     | src.common.utils:set_seed:28 - Random seed set to 42
+2025-09-08 02:31:56 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:31:56 | INFO     | src.models.vit_small:__init__:200 - VisionTransformerSmall initialized: 64x64 -> 64 patches, 384D
+2025-09-08 02:31:56 | INFO     | src.models.gcn:__init__:103 - GCN initialized: 25 -> 256 -> 256, 3 layers
+2025-09-08 02:31:56 | INFO     | src.models.transformer_text:__init__:112 - TransformerTextEncoder initialized: 384D, 4 layers, 6 heads
+2025-09-08 02:31:56 | INFO     | src.models.fusion:__init__:209 - MultiModalFusionNetwork initialized: 5 modalities -> 512D
+2025-09-08 02:31:56 | INFO     | src.models.triage_head:__init__:154 - ThreatTriageHead initialized: 512 -> 3 classes, 100 MC samples
+2025-09-08 02:31:57 | INFO     | src.models.threat_system:_init_ssl_components:88 - SSL components initialized
+2025-09-08 02:31:57 | INFO     | src.models.threat_system:__init__:64 - ThreatDetectionSystem initialized with all components
+2025-09-08 02:31:57 | INFO     | src.common.utils:get_device:43 - Using CUDA device: NVIDIA GeForce GTX 1650
+2025-09-08 02:31:57 | INFO     | src.neuro_symbolic.knowledge_graph:_initialize_relations:92 - Initialized 16 knowledge relations
+2025-09-08 02:31:57 | INFO     | src.neuro_symbolic.knowledge_graph:__init__:31 - ThreatKnowledgeGraph initialized with 44 nodes
+2025-09-08 02:31:57 | INFO     | src.neuro_symbolic.rules:__init__:121 - ThreatRuleEngine initialized with 10 rules
+2025-09-08 02:31:57 | INFO     | src.neuro_symbolic.fusion_validate:__init__:54 - NeuroSymbolicFusion initialized
+2025-09-08 02:31:57 | INFO     | src.train.train_core:__init__:63 - ThreatTrainer initialized
+2025-09-08 02:31:59 | INFO     | src.data.loader:load_dataset:114 - Dataset loaded with shape (400000, 26)
+2025-09-08 02:31:59 | INFO     | src.data.loader:load_dataset:115 - Columns: ['Time', 'Protocol', 'Flag', 'Family', 'Clusters', 'SeddAddress', 'ExpAddress', 'BTC', 'USD', 'Netflow Bytes', 'IP Address', 'Threat Level', 'Port', 'Prediction', 'Payload Size', 'Number of Packets', 'Application Layer Data', 'User-Agent', 'Geolocation', 'Logistics ID', 'Anomaly Score', 'Event Description', 'Response Time', 'Session ID', 'Data Transfer Rate', 'Error Code']
+2025-09-08 02:32:55 | INFO     | src.data.loader:extract_labels:180 - Dropping 0 samples with unknown labels
+2025-09-08 02:33:02 | INFO     | src.data.preprocessing:process_features:56 - Processing multi-modal features...
+2025-09-08 02:34:11 | INFO     | src.data.preprocessing:_process_graph_features:229 - Created graph with 800000 nodes and 400000 edges

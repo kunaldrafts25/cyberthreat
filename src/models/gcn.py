@@ -39,6 +39,13 @@ class GraphConvBlock(nn.Module):
         x = F.relu(x)
         x = self.dropout(x)
         return x
+class GlobalPoolWrapper(nn.Module):
+    def __init__(self, pool_fn):
+        super().__init__()
+        self.pool_fn = pool_fn
+
+    def forward(self, x, batch):
+        return self.pool_fn(x, batch)
 
 
 class GraphConvolutionalNetwork(nn.Module):
@@ -81,10 +88,10 @@ class GraphConvolutionalNetwork(nn.Module):
         
         # Global pooling layers
         self.global_pooling = nn.ModuleDict({
-            'mean': global_mean_pool,
-            'max': global_max_pool
-        })
-        
+            'mean': GlobalPoolWrapper(global_mean_pool),
+            'max': GlobalPoolWrapper(global_max_pool),
+})
+
         # Final projection
         self.projection = nn.Sequential(
             nn.Linear(self.output_dim * 2, self.output_dim),  # *2 for mean+max pooling

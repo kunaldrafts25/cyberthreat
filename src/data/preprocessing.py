@@ -452,7 +452,9 @@ class ThreatFeatureProcessor:
         
         # Basic centrality measures
         degree = G.degree(node)
-        features.append(degree / max(dict(G.degree()).values(), 1))
+        degree_dict = dict(G.degree())
+        max_degree = max(list(degree_dict.values())) if degree_dict else 1
+        features.append(degree / max_degree)
         
         try:
             betweenness = nx.betweenness_centrality(G).get(node, 0)

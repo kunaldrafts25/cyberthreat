@@ -8,7 +8,7 @@ system:
 
 # Data configuration
 data:
-  dataset_path: "data/zero_day_attack_detection_dataset_V1-400k"
+  dataset_path: "data/zero_day_attack_detection_dataset_V1-400k.csv"
   target_column_priority: ["Threat Level", "Prediction", "Anomaly Score"]
   drop_unknown_labels: true
   sample_limit: null  # null for all data, int for subset
@@ -98,7 +98,7 @@ analytics:
 rl:
   env_name: "ThreatDecisionEnv"
   action_space: 3  # monitor, isolate, block
-  learning_rate: 1e-4
+  learning_rate: 0.0001
   gamma: 0.99
   eps_start: 1.0
   eps_end: 0.01
@@ -109,8 +109,8 @@ rl:
 # Training
 training:
   epochs: 50
-  learning_rate: 1e-4
-  weight_decay: 1e-5
+  learning_rate: 0.0001
+  weight_decay: 0.0001
   gradient_clip: 1.0
   early_stopping_patience: 10
   save_top_k: 3
