@@ -11,11 +11,11 @@ data:
   dataset_path: "data/zero_day_attack_detection_dataset_V1-400k.csv"
   target_column_priority: ["Threat Level", "Prediction", "Anomaly Score"]
   drop_unknown_labels: true
-  sample_limit: null  # null for all data, int for subset
+  sample_limit: 10000  # null for all data, int for subset
   train_split: 0.7
   val_split: 0.15
   test_split: 0.15
-  batch_size: 32
+  batch_size: 64
   num_workers: 4
   
   # Label mapping
